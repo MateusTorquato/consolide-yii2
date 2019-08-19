@@ -38,39 +38,41 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php ActiveForm::end(); ?>
 
-    <table class="table table-bordered" style="margin-top: 20px;">
-        <tr>
-            <th>Código</th>
-            <th>Nome</th>
-            <th>CPF</th>
-            <th>Telefone</th>
-            <th>Email</th>
-            <th>Data registro</th>
-            <th width="280px">Ações</th>
-        </tr>
-
-        <?php foreach ($marcas as $marca) : ?>
+    <div class="table-responsive">
+        <table class="table table-bordered" style="margin-top: 20px;">
             <tr>
-                <td> <?= $marca->codigo_identificacao?> </td>
-                <td> <?= $marca->nome?> </td>
-                <td> <?= Yii::$app->formatter->asCpf($marca->cpf) ?> </td>
-                <td> <?= Yii::$app->formatter->asTelefone($marca->telefone) ?> </td>
-                <td> <?= $marca->email?> </td>
-                <td> <?= Yii::$app->formatter->asDate($marca->data_registro, 'd/MM/Y'); ?></td>
-                <td>
-                    <?= Html::a('Editar', ['update', 'id' => $marca->id], ['class' => 'btn btn-primary']) ?>
-                    <?= Html::a('Excluir', ['delete', 'id' => $marca->id], [
-                        'class' => 'btn btn-danger',
-                        'data' => [
-                            'confirm' => 'Deseja realmente excluir este item?',
-                            'method' => 'post',
-                        ],
-                    ]) ?>
-                </td>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th>Data registro</th>
+                <th width="280px">Ações</th>
             </tr>
-        <?php endforeach; ?>
-
-
-    </table>
+    
+            <?php foreach ($marcas as $marca) : ?>
+                <tr>
+                    <td> <?= $marca->codigo_identificacao?> </td>
+                    <td> <?= $marca->nome?> </td>
+                    <td> <?= Yii::$app->formatter->asCpf($marca->cpf) ?> </td>
+                    <td> <?= Yii::$app->formatter->asTelefone($marca->telefone) ?> </td>
+                    <td> <?= $marca->email?> </td>
+                    <td> <?= Yii::$app->formatter->asDate($marca->data_registro, 'd/MM/Y'); ?></td>
+                    <td>
+                        <?= Html::a('Editar', ['update', 'id' => $marca->id], ['class' => 'btn btn-primary']) ?>
+                        <?= Html::a('Excluir', ['delete', 'id' => $marca->id], [
+                            'class' => 'btn btn-danger',
+                            'data' => [
+                                'confirm' => 'Deseja realmente excluir este item?',
+                                'method' => 'post',
+                            ],
+                        ]) ?>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+    
+    
+        </table>
+    </div>
     <?= LinkPager::widget(['pagination' => $pagination]); ?>
 </div>
