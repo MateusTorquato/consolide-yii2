@@ -5,7 +5,7 @@ namespace app\models;
 use DateTime;
 use Yii;
 
-class Marcas extends \yii\db\ActiveRecord
+class Marca extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}

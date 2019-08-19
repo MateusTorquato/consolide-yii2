@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Marcas */
+/* @var $model app\models\Marca */
 
 \yii\web\YiiAsset::register($this);
 ?>

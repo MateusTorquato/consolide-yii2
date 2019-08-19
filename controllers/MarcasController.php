@@ -3,15 +3,15 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Marcas;
-use app\models\MarcasSearch;
+use app\models\Marca;
+use app\models\MarcaSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\data\Pagination;
 
 /**
- * MarcasController implements the CRUD actions for Marcas model.
+ * MarcasController implements the CRUD actions for Marca model.
  */
 class MarcasController extends Controller
 {
@@ -31,12 +31,12 @@ class MarcasController extends Controller
     }
 
     /**
-     * Lists all Marcas models.
+     * Lists all Marca models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new MarcasSearch();
+        $searchModel = new MarcaSearch();
         $query = $searchModel->search(Yii::$app->request->queryParams);
 
         $count = $query->count();
@@ -56,7 +56,7 @@ class MarcasController extends Controller
     }
 
     /**
-     * Displays a single Marcas model.
+     * Displays a single Marca model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -69,13 +69,13 @@ class MarcasController extends Controller
     }
 
     /**
-     * Creates a new Marcas model.
+     * Creates a new Marca model.
      * If creation is successful, the browser will be redirected to the 'index' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Marcas();
+        $model = new Marca();
         if ($model->load(Yii::$app->request->post())) {
             if ($model->validate() && $model->save()) {
                 Yii::$app->session->setFlash('success', "Marca criada com sucesso.");
@@ -92,7 +92,7 @@ class MarcasController extends Controller
     }
 
     /**
-     * Updates an existing Marcas model.
+     * Updates an existing Marca model.
      * If update is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -117,7 +117,7 @@ class MarcasController extends Controller
     }
 
     /**
-     * Deletes an existing Marcas model.
+     * Deletes an existing Marca model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -131,15 +131,15 @@ class MarcasController extends Controller
     }
 
     /**
-     * Finds the Marcas model based on its primary key value.
+     * Finds the Marca model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Marcas the loaded model
+     * @return Marca the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Marcas::findOne($id)) !== null) {
+        if (($model = Marca::findOne($id)) !== null) {
             return $model;
         }
 

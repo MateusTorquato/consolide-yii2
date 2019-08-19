@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Marcas */
+/* @var $model app\models\Marca */
 
 ?>
 <div class="marcas-create">
