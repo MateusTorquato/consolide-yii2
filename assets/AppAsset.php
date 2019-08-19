@@ -24,7 +24,6 @@ class AppAsset extends AssetBundle
         'css/app.css',
     ];
     public $js = [
-        'js/global-masks.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
