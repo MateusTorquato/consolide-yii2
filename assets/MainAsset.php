@@ -15,19 +15,17 @@ use yii\web\AssetBundle;
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
  */
-class AppAsset extends AssetBundle
+class MainAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        '//fonts.googleapis.com/css?family=Nunito:200,600',
-        'css/app.css',
+        'css/main.css',
     ];
     public $js = [
-        'js/global-masks.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
-        '\rmrevin\yii\fontawesome\AssetBundle',
+        'yii\bootstrap\BootstrapAsset',
     ];
 }
