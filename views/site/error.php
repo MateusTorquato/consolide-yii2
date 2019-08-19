@@ -6,22 +6,23 @@
 /* @var $exception Exception */
 
 use yii\helpers\Html;
+use app\assets\MainErrorAsset;
+
+MainErrorAsset::register($this);
 
 $this->title = $name;
 ?>
 <div class="site-error">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
     <div class="alert alert-danger">
         <?= nl2br(Html::encode($message)) ?>
     </div>
 
-    <p>
-        The above error occurred while the Web server was processing your request.
+    <p class="boneco">
+        ¯\_(ツ)_/¯
     </p>
-    <p>
-        Please contact us if you think this is a server error. Thank you.
+    <p class="texto">
+        Uma rua sem saída é um bom lugar para se dar a volta.
     </p>
 
 </div>
