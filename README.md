@@ -1,4 +1,6 @@
-Teste que eu fiz para a empresa Consolide em Yii2. Antes de fazer usando Yii2 eu fiz em laravel, então me solicitaram usando outro framework, segue o link da versão em laravel: https://github.com/MateusTorquato/consolide-yii2
+Teste que eu fiz para a empresa Consolide usando o framework Yii2. Antes de fazer usando Yii2 eu fiz o mesmo teste usando laravel, então eles me solicitaram para usar o Yii2. Segue o link da versão em laravel desse mesmo projeto: https://github.com/MateusTorquato/consolide-laravel
+
+Link para o projeto rodando: https://consolide-sua-marca-yii2.herokuapp.com/
 
 Pré requisito
 ------------
